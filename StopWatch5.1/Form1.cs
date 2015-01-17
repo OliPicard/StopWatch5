@@ -100,11 +100,15 @@ namespace StopWatch5
         {
             if (pear < apple)
             {
-                label5.Text = ("Fastest Lap: " + StartTime);
+                label5.Text = ("Fastest Lap 2: " + StartTime);
             }
             if (pear == apple)
             {
                 label5.Text = ("Tie between Lap 1 and Lap 2: " + StartTime);
+            }
+            if (pear == cherry)
+            {
+                label5.Text = ("Tie between Lap 1 and  Lap 3: " + StartTime);
             }
         }
         public void calcFTThree()
@@ -113,9 +117,13 @@ namespace StopWatch5
             {
                 label5.Text = ("Fastest Lap 3: " + StartTime);
             }
-            if (cherry == (apple & pear))
+            if (cherry == apple && cherry == pear && cherry == cherry)
             {
                 label5.Text = ("Tie between Lap 1, 2 and 3! " + StartTime);
+            }
+            if (cherry == apple)
+            {
+                label5.Text = ("Tie between Lap 2 and 3! " + StartTime);
             }
 
         }
