@@ -117,15 +117,14 @@ namespace StopWatch5
             {
                 label5.Text = ("Fastest Lap 3: " + StartTime);
             }
-            if (cherry == apple && cherry == pear && cherry == cherry)
-            {
-                label5.Text = ("Tie between Lap 1, 2 and 3! " + StartTime);
-            }
             if (cherry == apple)
             {
                 label5.Text = ("Tie between Lap 2 and 3! " + StartTime);
             }
-
+            if (cherry == apple && cherry == pear && cherry == cherry)
+            {
+                label5.Text = ("Tie between Lap 1, 2 and 3! " + StartTime);
+            }
         }
 
     }
