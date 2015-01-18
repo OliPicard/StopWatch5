@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("StopWatch5.1")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyTitle("StopWatch5.1.2")]
+[assembly: AssemblyDescription("a simple stopwatch")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("StopWatch5.1")]
+[assembly: AssemblyCompany("OliPicard")]
+[assembly: AssemblyProduct("StopWatch5.1.2")]
 [assembly: AssemblyCopyright("Copyright ©  2015")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
