@@ -42,10 +42,10 @@ namespace StopWatch5
             timer1.Enabled = false;
             startTime = new TimeSpan(0, 0, 0);
             label1.Text = startTime.ToString();
-            label2.Text = "Lap 1";
-            label3.Text = "Lap 2";
-            label4.Text = "Lap 3";
-            label5.Text = "";
+            label2.Text = ("Lap 1");
+            label3.Text = ("Lap 2");
+            label4.Text = ("Lap 3");
+            label5.Text = ("");
             lp = 0;
             Lap.Enabled = true;
         }
