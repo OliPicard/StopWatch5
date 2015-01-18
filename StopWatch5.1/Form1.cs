@@ -14,7 +14,7 @@ namespace StopWatch5
 {
     public partial class Form1 : Form
     {
-        TimeSpan StartTime = new TimeSpan(0, 0, 0);
+        TimeSpan startTime = new TimeSpan(0, 0, 0);
         TimeSpan addTime = new TimeSpan(0, 0, 1);
         int apple;
         int pear;
@@ -27,8 +27,8 @@ namespace StopWatch5
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            StartTime = StartTime + addTime;
-            label1.Text = StartTime.ToString();
+            startTime = startTime + addTime;
+            label1.Text = startTime.ToString();
 
         }
 
@@ -40,8 +40,8 @@ namespace StopWatch5
         private void button2_Click(object sender, EventArgs e)
         {
             timer1.Enabled = false;
-            StartTime = new TimeSpan(0, 0, 0);
-            label1.Text = StartTime.ToString();
+            startTime = new TimeSpan(0, 0, 0);
+            label1.Text = startTime.ToString();
             label2.Text = ("Lap 1");
             label3.Text = ("Lap 2");
             label4.Text = ("Lap 3");
@@ -56,33 +56,33 @@ namespace StopWatch5
             switch (lp)
             {
                 case 1:
-                    label2.Text = StartTime.ToString();
-                    string what = StartTime.ToString();
+                    label2.Text = startTime.ToString();
+                    string what = startTime.ToString();
                     what = what.Replace(":", "");
                     apple = Convert.ToInt16(what);
                     calcFTOne();
-                    StartTime = new TimeSpan(0, 0, 0);
-                    label1.Text = StartTime.ToString();
+                    startTime = new TimeSpan(0, 0, 0);
+                    label1.Text = startTime.ToString();
                     timer1.Enabled = true;
                     break;
                 case 2:
-                    label3.Text = StartTime.ToString();
-                    string who = StartTime.ToString();
+                    label3.Text = startTime.ToString();
+                    string who = startTime.ToString();
                     who = who.Replace(":", "");
                     pear = Convert.ToInt16(who);
                     calcFTTwo();
-                    StartTime = new TimeSpan(0, 0, 0);
-                    label1.Text = StartTime.ToString();
+                    startTime = new TimeSpan(0, 0, 0);
+                    label1.Text = startTime.ToString();
                     timer1.Enabled = true;
                     break;
                 case 3:
                     Lap.Enabled = false;
-                    label4.Text = StartTime.ToString();
-                    string why = StartTime.ToString();
+                    label4.Text = startTime.ToString();
+                    string why = startTime.ToString();
                     why = why.Replace(":", "");
                     cherry = Convert.ToInt16(why);
                     calcFTThree();
-                    label1.Text = StartTime.ToString();
+                    label1.Text = startTime.ToString();
                     timer1.Enabled = true;
                     break;
             }
@@ -93,37 +93,37 @@ namespace StopWatch5
 
             if (apple == apple)
             {
-                label5.Text = ("Fastest Lap 1: " + StartTime);
+                label5.Text = ("Fastest Lap 1: " + startTime);
             }
         }
         public void calcFTTwo()
         {
             if (pear < apple)
             {
-                label5.Text = ("Fastest Lap 2: " + StartTime);
+                label5.Text = ("Fastest Lap 2: " + startTime);
             }
             if (pear == apple)
             {
-                label5.Text = ("Tie between Lap 1 and Lap 2: " + StartTime);
+                label5.Text = ("Tie between Lap 1 and Lap 2: " + startTime);
             }
             if (pear == cherry)
             {
-                label5.Text = ("Tie between Lap 1 and  Lap 3: " + StartTime);
+                label5.Text = ("Tie between Lap 1 and  Lap 3: " + startTime);
             }
         }
         public void calcFTThree()
         {
             if (cherry < apple && cherry < pear)
             {
-                label5.Text = ("Fastest Lap 3: " + StartTime);
+                label5.Text = ("Fastest Lap 3: " + startTime);
             }
             if (cherry == apple)
             {
-                label5.Text = ("Tie between Lap 2 and 3! " + StartTime);
+                label5.Text = ("Tie between Lap 2 and 3! " + startTime);
             }
             if (cherry == apple && cherry == pear && cherry == cherry)
             {
-                label5.Text = ("Tie between Lap 1, 2 and 3! " + StartTime);
+                label5.Text = ("Tie between Lap 1, 2 and 3! " + startTime);
             }
         }
 
