@@ -118,7 +118,7 @@ namespace StopWatch5
             {
                 label5.Text = ("Tie between Lap 1 and 3! " + startTime);
             }
-            if (pear == cherry)
+            if (apple > pear && apple > cherry && pear == cherry)
             {
                 label5.Text = ("Tie between Lap 2 and 3! " + startTime);
             }
